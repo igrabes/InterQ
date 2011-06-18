@@ -1,0 +1,31 @@
+<h1>Listing questions</h1>
+
+<table>
+  <tr>
+    <th>Question1</th>
+    <th>Question2</th>
+    <th>Question3</th>
+    <th>Question4</th>
+    <th>Question5</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @questions.each do |question| %>
+  <tr>
+    <td><%= question.question1 %></td>
+    <td><%= question.question2 %></td>
+    <td><%= question.question3 %></td>
+    <td><%= question.question4 %></td>
+    <td><%= question.question5 %></td>
+    <td><%= link_to 'Show', question %></td>
+    <td><%= link_to 'Edit', edit_question_path(question) %></td>
+    <td><%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Question', new_job_question_path %>

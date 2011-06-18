@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Question1:</b>
+  <%= @question.question1 %>
+</p>
+
+<p>
+  <b>Question2:</b>
+  <%= @question.question2 %>
+</p>
+
+<p>
+  <b>Question3:</b>
+  <%= @question.question3 %>
+</p>
+
+<p>
+  <b>Question4:</b>
+  <%= @question.question4 %>
+</p>
+
+<p>
+  <b>Question5:</b>
+  <%= @question.question5 %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_question_path(@question) %> |
+<%= link_to 'Back', jobs_path %>

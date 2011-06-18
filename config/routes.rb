@@ -1,12 +1,17 @@
 Interq::Application.routes.draw do
   
+
   root :to => "pages#home"
 
+  resources :jobs do
+    resources :questions
+  end
+  
   get "pages/home"
   get "pages/about"
   get "pages/contact"
 
-  resources :jobs
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
