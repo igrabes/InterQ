@@ -1,2 +1,8 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>INTERQ</h1>
+<h2>What type of interview do you have?</h2>
+
+
+<%= select("job", "name", Job.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true })%>
+
+
+<%= link_to 'Home', root_path %>

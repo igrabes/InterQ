@@ -40,7 +40,8 @@ class QuestionsController < ApplicationController
   # POST /questions
   # POST /questions.xml
   def create
-    @question = Question.new(params[:question])
+    @job = Job.find(params[:id])
+    @question = @job.questions.new(params[:question])
 
     respond_to do |format|
       if @question.save
