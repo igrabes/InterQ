@@ -13,7 +13,8 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.xml
   def show
-    @question = Question.find(params[:id])
+    @job = Job.find(params[:job_id])
+    @question = @job.questions.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -40,12 +41,12 @@ class QuestionsController < ApplicationController
   # POST /questions
   # POST /questions.xml
   def create
-    @job = Job.find(params[:id])
-    @question = @job.questions.new(params[:question])
+    @job = Job.find(params[:job_id])
+    @question = @job.questions.build(params[:question])
 
     respond_to do |format|
       if @question.save
-        format.html { redirect_to(jobs_path, :notice => 'Question was successfully created.') }
+        format.html { redirect_to(job_question_path(@question.job_id, @question), :notice => 'Question was successfully created.') }
         format.xml  { render :xml => @question, :status => :created, :location => @question }
       else
         format.html { render :action => "new" }

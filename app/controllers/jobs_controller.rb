@@ -14,7 +14,6 @@ class JobsController < ApplicationController
   # GET /jobs/1.xml
   def show
     @job = Job.find(params[:id])
-    @question = @job.questions.build
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,7 +25,6 @@ class JobsController < ApplicationController
   # GET /jobs/new.xml
   def new
     @job = Job.new
-    @question = @job.questions.build
 
     respond_to do |format|
       format.html # new.html.erb

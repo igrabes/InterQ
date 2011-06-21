@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Question1</th>
+    <th>What is the question?</th>
     <th>Question2</th>
     <th>Question3</th>
     <th>Question4</th>
@@ -19,7 +19,7 @@
     <td><%= question.question3 %></td>
     <td><%= question.question4 %></td>
     <td><%= question.question5 %></td>
-    <td><%= link_to 'Show', job_questions_path %></td>
+    <td><%= link_to 'Show', job_question_path(question.job_id, question.id) %></td>
   </tr>
 <% end %>
 </table>
