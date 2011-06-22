@@ -1,4 +1,8 @@
 class JobsController < ApplicationController
+  
+  before_filter :authorize
+  
+  
   # GET /jobs
   # GET /jobs.xml
   def index

@@ -2,6 +2,8 @@ Interq::Application.routes.draw do
   
 
   root :to => "pages#home"
+  
+  resources :sessions
 
   resources :jobs do
     resources :questions
@@ -10,6 +12,9 @@ Interq::Application.routes.draw do
   get "pages/home"
   get "pages/about"
   get "pages/contact"
+  
+  match '/login',   :to => 'sessions#new'
+  match '/logout',  :to => 'sessions#destroy'
   
   
 

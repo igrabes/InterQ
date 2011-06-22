@@ -1,0 +1,32 @@
+/* dropdown menu */
+
+
+#dropdown, #dropdown ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#dropdown a {
+	display: block;
+	width: 10em;
+}
+
+#dropdown li {
+	float: left;
+	width:10em;
+}
+
+#dropdown li ul {
+	position: absolute;
+	width: 10em;
+	left: -999em;
+}
+
+#dropdown li:hover ul {
+	left:auto;
+}
+
+#dropdown li:hover ul, #dropdown li.sfhover ul {
+	left:auto;
+}
