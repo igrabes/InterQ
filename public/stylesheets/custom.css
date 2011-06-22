@@ -1,3 +1,128 @@
+body {
+	background: url("/images/bg1.png") repeat;
+	font-family: "Lucida Grande", "Arial", "sans-serif";
+	font-size: 14px;
+	/*margin: auto;*/
+}
+
+a img {
+	border: none;
+}
+
+a {
+	color:#000;
+}
+
+a:hover { 
+	color: #fff; 
+	background-color:#000; 
+	}
+
+.clear {
+	clear
+}
+
+form {
+	width: 400px;
+	display: block;
+	margin-top: 0em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div {
+	margin-top: 0px;
+	width: 400px;
+}
+
+textarea {
+	/*-webkit-appearance: textarea;*/
+	background-color: white;
+	border: 1px solid;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-webkit-box-orient: vertical;
+	resize: none;
+	cursor: auto;
+	padding: 2px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	width: 400px;
+	height: 100px;
+}
+
+.questions {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header_logo {
+	margin-bottom: 10px;
+	border: none;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#container {
+  width: 950px;
+  height: 100%px;
+  margin: 0 auto;
+  background: url("/images/bg2.png") repeat;
+  padding: 20px 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background: #FDFDFD;
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.home {
+	background-color: #FFF;
+	width: 900px;
+	height: 400px;
+	border: solid 1px black;
+	padding: 20px;
+}
+
+/* Navigation */
+
+nav {
+  float: right;
+}
+
+nav {
+  background-color: white;
+  padding: 0 0.7em;
+  white-space: nowrap;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+nav ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+nav ul li a:visited {
+  color: #09c;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
 /* dropdown menu */
 
 
@@ -25,8 +150,57 @@
 
 #dropdown li:hover ul {
 	left:auto;
+	color: #333;
 }
 
 #dropdown li:hover ul, #dropdown li.sfhover ul {
 	left:auto;
+}
+
+
+/* Question Fields */
+
+.field {
+	width: 600px;
+}
+
+
+/* Scaffold Errors */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
 }

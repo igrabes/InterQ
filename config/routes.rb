@@ -10,8 +10,8 @@ Interq::Application.routes.draw do
   end
   
   get "pages/home"
-  get "pages/about"
-  get "pages/contact"
+  match '/contact', :to => 'pages#contact'
+  match '/about',   :to => 'pages#about'
   
   match '/login',   :to => 'sessions#new'
   match '/logout',  :to => 'sessions#destroy'
