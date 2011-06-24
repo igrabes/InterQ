@@ -5,8 +5,26 @@ body {
 	/*margin: auto;*/
 }
 
-a img {
-	border: none;
+#container {
+  width: 950px;
+  height: 100%px;
+  margin: 0 auto;
+  background: url("/images/bg2.png") repeat;
+  padding: 20px 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.imglink {
+	border: none !important;
+	background-color: inherit;
+}
+
+.imglink:hover {
+	border: none !important;
+	background-color:inherit;
 }
 
 a {
@@ -14,8 +32,8 @@ a {
 }
 
 a:hover { 
-	color: #fff; 
-	background-color:#000; 
+	color: #fff;
+	background: #000;
 	}
 
 .clear {
@@ -58,29 +76,19 @@ textarea {
 
 .header_logo {
 	margin-bottom: 10px;
-	border: none;
+	border: none !important;
 }
+
 
 .center {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#container {
-  width: 950px;
-  height: 100%px;
-  margin: 0 auto;
-  background: url("/images/bg2.png") repeat;
-  padding: 20px 40px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  background: #FDFDFD;
-  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-}
+
 
 .home {
-	background-color: #FFF;
+	/*background-color: #FFF;*/
 	width: 900px;
 	height: 400px;
 	border: solid 1px black;
@@ -94,7 +102,6 @@ nav {
 }
 
 nav {
-  background-color: white;
   padding: 0 0.7em;
   white-space: nowrap;
 }
@@ -121,6 +128,7 @@ nav ul li a:visited {
 
 nav ul li a:hover {
   text-decoration: underline;
+	background: #000;
 }
 
 /* dropdown menu */
@@ -150,7 +158,7 @@ nav ul li a:hover {
 
 #dropdown li:hover ul {
 	left:auto;
-	color: #333;
+	color: #000;
 }
 
 #dropdown li:hover ul, #dropdown li.sfhover ul {
