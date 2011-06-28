@@ -2,14 +2,16 @@
 
 <table>
   <tr>
-    <th>What is the question?</th>
+    <th>Question1</th>
     <th>Question2</th>
     <th>Question3</th>
     <th>Question4</th>
     <th>Question5</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Question6</th>
+    <th>Question7</th>
+	  <th>Question8</th>
+    <th>Question9</th>    
+		<th>Question10</th>
   </tr>
 
 <% @questions.each do |question| %>
@@ -19,6 +21,11 @@
     <td><%= question.question3 %></td>
     <td><%= question.question4 %></td>
     <td><%= question.question5 %></td>
+		<td><%= question.question6 %></td>
+		<td><%= question.question7 %></td>
+		<td><%= question.question8 %></td>
+		<td><%= question.question9 %></td>
+		<td><%= question.question10 %></td>
     <td><%= link_to 'Show', job_question_path(question.job_id, question.id) %></td>
   </tr>
 <% end %>
