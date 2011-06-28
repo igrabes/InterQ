@@ -1,7 +1,7 @@
 class CreateQuestions < ActiveRecord::Migration
   def self.up
     create_table :questions do |t|
-       t.references :job
+      t.references :job
       t.text :question1
       t.text :question2
       t.text :question3
@@ -12,6 +12,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.text :question8
       t.text :question9
       t.text :question10
+      t.text :question11
       
       t.timestamps
     end
