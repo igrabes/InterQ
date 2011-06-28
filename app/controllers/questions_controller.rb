@@ -46,7 +46,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        format.html { redirect_to(job_question_path(@question.job_id, @question), :notice => 'Question was successfully created.') }
+        format.html { redirect_to(job_question_path(@question.job_id, @question), :notice => 'Study guide was successfully created.') }
         format.xml  { render :xml => @question, :status => :created, :location => @question }
       else
         format.html { render :action => "new" }

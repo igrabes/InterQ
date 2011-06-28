@@ -25,6 +25,11 @@ ActiveRecord::Schema.define(:version => 20110618002323) do
     t.text     "question3"
     t.text     "question4"
     t.text     "question5"
+    t.text     "question6"
+    t.text     "question7"
+    t.text     "question8"
+    t.text     "question9"
+    t.text     "question10"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
