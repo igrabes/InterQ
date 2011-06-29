@@ -111,7 +111,7 @@ textarea {
 	/*border: solid 1px black;*/
 	padding: 10px;
 	margin-left: 20px;
-	border-right: solid 1px #dde0e1;
+	/*border-right: solid 1px #dde0e1;*/
 	margin-top:20px;
 }
 
@@ -123,27 +123,48 @@ textarea {
 .first_job {
 	float: right;
 	width: 35%;
-	height: 200px;
+	height: 220px;
 	margin-right: 20px;
-	padding: 10px;
-	padding-left: 0px;
+	padding: 30px;
+	/*padding-left: 0px;*/
 	text-align: center;
-	/*border: solid 1px black;*/
+	border: solid 1px black;
 	margin-top:20px;
+	background: #c9d9dd;
 }
 
-#featured_question {
+/*.featured_question {
 	width: 300px;
 	height: 50px;
-	padding: 30px;
+	padding: 5px;
+	margin-right:100px;
+	background: #334E5A;
+}*/
+
+.featured_question a {
+	font-size: 120%;
+	width: 300;
+	height:50px;
+	margin-right: 90px;
+	padding:20px;
+	font-weight: bold;
+	border: solid 1px black;
+	background: #334E5A ;
+	color:#fff;
+	-moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
 }
 
-#featured_question a {
-	font-size: 135%;
-	margin-right: 20px;
-	padding:5px;
+.featured_question a:hover{
+	color: #ccc;
 }
 
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
 
 
 /* Navigation */
@@ -263,3 +284,15 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+/* Answer Fields */
+
+.answer_field {
+	border:1px solid black;
+	padding: 10px;
+	width: 500px;
+	background: #fff ;
+	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
