@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  answer1: MyText
+  answer2: MyText
+  answer3: MyText
+  answer4: MyText
+  answer5: MyText
+
+two:
+  answer1: MyText
+  answer2: MyText
+  answer3: MyText
+  answer4: MyText
+  answer5: MyText

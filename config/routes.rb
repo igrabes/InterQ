@@ -6,8 +6,11 @@ Interq::Application.routes.draw do
   resources :sessions
 
   resources :jobs do
-    resources :questions
-  end
+    resources :questions do
+       resources :answers
+     end
+   end
+  
   
   get "pages/home"
   match '/contact', :to => 'pages#contact'

@@ -7,6 +7,7 @@ class JobsController < ApplicationController
   # GET /jobs.xml
   def index
     @jobs = Job.all
+    @questions = Question.all
 
     respond_to do |format|
       format.html # index.html.erb

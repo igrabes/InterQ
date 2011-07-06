@@ -1,0 +1,57 @@
+<%= form_for(@answer, :url => job_question_answers_path(@job, @question)) do |f| %>
+  <% if @answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
+
+      <ul>
+      <% @answer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label @question.question1 %><br />
+    <%= f.text_area :answer1 %>
+  </div>
+  <div class="field">
+    <%= f.label @question.question2 %><br />
+    <%= f.text_area :answer2 %>
+  </div>
+  <div class="field">
+    <%= f.label @question.question3 %><br />
+    <%= f.text_area :answer3 %>
+  </div>
+  <div class="field">
+    <%= f.label @question.question4 %><br />
+    <%= f.text_area :answer4 %>
+  </div>
+  <div class="field">
+    <%= f.label @question.question5 %><br />
+    <%= f.text_area :answer5 %>
+  </div>
+	<div class="field">
+    <%= f.label @question.question6 %><br />
+    <%= f.text_area :answer6 %>
+  </div>
+	<div class="field">
+    <%= f.label @question.question7 %><br />
+    <%= f.text_area :answer7 %>
+  </div>
+	<div class="field">
+    <%= f.label @question.question8 %><br />
+    <%= f.text_area :answer8 %>
+  </div>
+	<div class="field">
+    <%= f.label @question.question9 %><br />
+    <%= f.text_area :answer9 %>
+  </div>
+	<div class="field">
+    <%= f.label @question.question10 %><br />
+    <%= f.text_area :answer10 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
