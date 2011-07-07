@@ -10,5 +10,9 @@ class PagesController < ApplicationController
   def contact
     @contact = "Contact"
   end
+  
+  def job_list
+    @job_list = "Job List"
+  end
 
 end

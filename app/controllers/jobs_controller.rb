@@ -1,13 +1,12 @@
 class JobsController < ApplicationController
   
-  before_filter :authorize
+  before_filter :authorize, :except => [:index]
   
   
   # GET /jobs
   # GET /jobs.xml
   def index
-    @jobs = Job.all
-    @questions = Question.all
+   @jobs = Job.all
 
     respond_to do |format|
       format.html # index.html.erb

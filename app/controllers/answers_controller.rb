@@ -1,6 +1,6 @@
 class AnswersController < ApplicationController
   
-  before_filter :authorize, :only => [:index]
+  before_filter :authorize, :except => [:show, :new, :create]
   
   # GET /answers
   # GET /answers.xml
@@ -34,7 +34,6 @@ class AnswersController < ApplicationController
     @answer.job = Job.find(params[:job_id])
     @answer.question_id = params[:question_id]
     @answer.job_id = params[:job_id]
-    
     @job = Job.find(params[:job_id])
     @question = @job.questions.find(params[:question_id])
   end
@@ -53,7 +52,7 @@ class AnswersController < ApplicationController
     @answer = @question.answers.build(params[:answer])
     respond_to do |format|
       if @answer.save
-        format.html { redirect_to(job_question_answer_path(@job, @answer.question_id, @answer), :notice => 'Answer was successfully created.') }
+        format.html { redirect_to(job_question_answer_path(@job, @answer.question_id, @answer), :notice => 'Study guide was successfully created.') }
         format.xml  { render :xml => @answer, :status => :created, :location => @answer }
       else
         format.html { render :action => "new" }

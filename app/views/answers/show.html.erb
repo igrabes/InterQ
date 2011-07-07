@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h3>Study these answers to ace your <%= @job.name %> interview!</h3>
+
 <div class="answer_field center">
 	  <h4><%= @question.question1 %>:</h4>
 	  <p><%= @answer.answer1 %></p>
@@ -32,7 +34,10 @@
 	  <p><%= @answer.answer10 %></p>
 </div>
 
+<br \>
+<h3>Let us know what we can do to make Preptly better, <%= link_to 'Contact Us Here', contact_path %>!</h3>
 
-
+<% if admin? %>
 <%= link_to 'Edit', edit_job_question_answer_path(@answer) %> |
 <%= link_to 'Back', job_question_answers_path %>
+<% end %>

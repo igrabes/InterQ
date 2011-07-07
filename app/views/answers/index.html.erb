@@ -7,6 +7,11 @@
     <th>Answer3</th>
     <th>Answer4</th>
     <th>Answer5</th>
+		<th>Answer6</th>
+    <th>Answer7</th>
+    <th>Answer8</th>
+    <th>Answer9</th>
+    <th>Answer10</th>
   </tr>
 
 <% @answers.each do |answer| %>
@@ -16,11 +21,21 @@
     <td><%= answer.answer3 %></td>
     <td><%= answer.answer4 %></td>
     <td><%= answer.answer5 %></td>
+		<td><%= answer.answer6 %></td>
+    <td><%= answer.answer7 %></td>
+    <td><%= answer.answer8 %></td>
+    <td><%= answer.answer9 %></td>
+    <td><%= answer.answer10 %></td>
 
   </tr>
 <% end %>
 </table>
 
 <br />
+
+
+<td><%= link_to 'New', new_job_question_answer_path(@answer) %></td>
+
+
 
 <%= link_to 'New Answer', new_job_question_answer_path %>
