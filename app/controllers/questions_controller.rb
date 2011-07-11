@@ -37,9 +37,9 @@ class QuestionsController < ApplicationController
   end
 
   # GET /questions/1/edit
-  def edit
-    @question = Question.find(params[:id])
-  end
+   def edit
+     @question = Question.find(params[:id])
+   end
 
   # POST /questions
   # POST /questions.xml
@@ -58,26 +58,29 @@ class QuestionsController < ApplicationController
     end
   end
 
+
   # PUT /questions/1
   # PUT /questions/1.xml
-  def update
-    @question = Question.find(params[:id])
+    def update
+      @question = Question.find(params[:id])
 
-    respond_to do |format|
-      if @question.update_attributes(params[:question])
-        format.html { redirect_to(@question, :notice => 'Question was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @question.errors, :status => :unprocessable_entity }
+      respond_to do |format|
+        if @question.update_attributes(params[:question])
+          format.html { redirect_to(@question, :notice => 'Question was successfully updated.') }
+          format.xml  { head :ok }
+        else
+          format.html { render :action => "edit" }
+          format.xml  { render :xml => @question.errors, :status => :unprocessable_entity }
+        end
       end
     end
-  end
+
 
   # DELETE /questions/1
   # DELETE /questions/1.xml
   def destroy
-    @question = Question.find(params[:id])
+    @job = Job.find(params[:job_id])
+    @question = @job.questions.find(params[:id])
     @question.destroy
 
     respond_to do |format|
