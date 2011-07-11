@@ -307,7 +307,7 @@ div.field, div.actions {
 
 input#answer_submit {
 	width: 150px;
-	font-size: 400%;
+	font-size: 100%;
 }
 
 .job_field {
