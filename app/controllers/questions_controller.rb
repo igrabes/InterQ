@@ -1,5 +1,7 @@
 class QuestionsController < ApplicationController
   
+respond_to :html, :xml, :json
+  
   before_filter :authorize
   
   # GET /questions
@@ -28,18 +30,15 @@ class QuestionsController < ApplicationController
   # GET /questions/new
   # GET /questions/new.xml
   def new
-    @question = Question.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @question }
-    end
+    @job = Job.find(params[:job_id])
+    @question = @job.questions.build
+      respond_with(@question)
   end
 
   # GET /questions/1/edit
-   def edit
-     @question = Question.find(params[:id])
-   end
+  def edit
+    @question = Question.find(params[:id])
+  end
 
   # POST /questions
   # POST /questions.xml
@@ -60,20 +59,20 @@ class QuestionsController < ApplicationController
 
 
   # PUT /questions/1
-  # PUT /questions/1.xml
-    def update
-      @question = Question.find(params[:id])
+    # PUT /questions/1.xml
+      def update
+        @question = Question.find(params[:id])
 
-      respond_to do |format|
-        if @question.update_attributes(params[:question])
-          format.html { redirect_to(@question, :notice => 'Question was successfully updated.') }
-          format.xml  { head :ok }
-        else
-          format.html { render :action => "edit" }
-          format.xml  { render :xml => @question.errors, :status => :unprocessable_entity }
+        respond_to do |format|
+          if @question.update_attributes(params[:question])
+            format.html { redirect_to(@question, :notice => 'Question was successfully updated.') }
+            format.xml  { head :ok }
+          else
+            format.html { render :action => "edit" }
+            format.xml  { render :xml => @question.errors, :status => :unprocessable_entity }
+          end
         end
       end
-    end
 
 
   # DELETE /questions/1
