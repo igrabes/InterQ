@@ -36,7 +36,6 @@
 
 <br \>
 
-<p id="pdf_link"><%= link_to "Download Your Answers (PDF)", job_question_answer_path(@job_id, @question_id, @answer, :format => "pdf") %></p>
 <p id="pdf_link"><%= link_to "Download Your Answers (PDF)", job_question_answer_path(@answer.job_id, @answer.question_id, @answer, :format => "pdf") %></p>
 
 <h3>Let us know what we can do to make Preptly better, <%= link_to 'Contact Us Here', contact_path %>!</h3>
