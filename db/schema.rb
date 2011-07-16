@@ -13,17 +13,9 @@
 ActiveRecord::Schema.define(:version => 20110630050628) do
 
   create_table "answers", :force => true do |t|
+    t.integer  "job_id"
     t.integer  "question_id"
-    t.text     "answer1"
-    t.text     "answer2"
-    t.text     "answer3"
-    t.text     "answer4"
-    t.text     "answer5"
-    t.text     "answer6"
-    t.text     "answer7"
-    t.text     "answer8"
-    t.text     "answer9"
-    t.text     "answer10"
+    t.text     "answer"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,17 +28,7 @@ ActiveRecord::Schema.define(:version => 20110630050628) do
 
   create_table "questions", :force => true do |t|
     t.integer  "job_id"
-    t.text     "question1"
-    t.text     "question2"
-    t.text     "question3"
-    t.text     "question4"
-    t.text     "question5"
-    t.text     "question6"
-    t.text     "question7"
-    t.text     "question8"
-    t.text     "question9"
-    t.text     "question10"
-    t.text     "question11"
+    t.text     "question"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

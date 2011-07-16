@@ -320,4 +320,22 @@ input#answer_submit {
 }
 
 
+@media print {
+	body {
+		background-color: #FFF;
+	}
+	
+	#container {
+		width: auto;
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	
+	#pdf_link {
+		display:none;
+	}
+	
+}
+
 
